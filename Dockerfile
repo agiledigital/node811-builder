@@ -11,7 +11,7 @@ ENV HOME /home/jenkins
 RUN addgroup -S -g 10000 jenkins
 RUN adduser -S -u 10000 -h $HOME -G jenkins jenkins
 
-RUN apt-get install git
+RUN  apk add --no-cache git
 
 WORKDIR /home/jenkins
 USER jenkins
